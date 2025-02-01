@@ -2,7 +2,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import PropTypes from 'prop-types'
 import TextForm from './components/TextForm';
-import Accordion from './components/Accordion';
 import React, {useState} from 'react';
 import Alert from './components/Alert';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -107,16 +106,17 @@ function App()
 
   return (
     <>
-    <BrowserRouter>
+    {/*<BrowserRouter>*/}
     <Navbar title="TextApp" aboutText="About" mode={mode}  customTheme={customTheme} enableGreyDark={enableGreyDark}></Navbar>
     <Alert  alert={alert}/>
     <div className="container col-6 my-3 mx-auto " style={{ width: '70%' }}>
-      <Routes>
-      <Route exact path="/" element={
-      <TextForm heading="Enter text to analyse below" mode={mode} showAlert={showAlert} btnMode={btnMode} color={color} />}></Route>
-      </Routes>
+      {/*<Routes>*/}
+      {/*<Route exact path="/" element={*/}
+      <TextForm heading="Enter text to analyse below" mode={mode} showAlert={showAlert} btnMode={btnMode} color={color} />
+      {/*}></Route>*/}
+      {/*</Routes>*/}
     </div>
-    </BrowserRouter>
+    {/*</BrowserRouter>*/}
     </>
   );
 }
